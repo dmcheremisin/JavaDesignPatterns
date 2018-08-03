@@ -8,7 +8,7 @@ public class OpenClosedBad {
 
     /**
      * This method represents bad practice, because:
-     * everytime we will make new car, we will have to change workInTaxi method
+     * every time we will make new car, we will have to change workInTaxi method
      * we will need to apply more, and more conditional statements in order to call proper method
      * @param toyota - Toyota
      */
