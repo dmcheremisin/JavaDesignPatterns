@@ -33,7 +33,7 @@ class XmlData implements DAO{
  * It may be JsonData, or XmlData, or any other class that implements DAO.
  */
 class ClientLayer {
-    private DAO dataAccess =  getDataAccess();
+    private DAO dataAccess = getDataAccess();
     void doJob() {
         dataAccess.execute();
     }
