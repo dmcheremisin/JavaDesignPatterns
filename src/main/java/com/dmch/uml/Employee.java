@@ -2,6 +2,7 @@ package com.dmch.uml;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Employee extends Man {
     private String position;
@@ -43,13 +44,34 @@ public class Employee extends Man {
     public void setDepartment(Department department) {
         this.department = department;
     }
-    public Set<PastPosition> getPastPositions() {
-        return pastPositions;
+    public Set<String> getPastPositions() {
+        return pastPositions.stream().map(PastPosition::getName).collect(Collectors.toSet());
     }
-    public void addPastPosition(PastPosition pastPosition) {
-        pastPositions.add(pastPosition);
+    public void addPastPosition(String name, Department department) {
+        pastPositions.add(new PastPosition(name, department));
     }
-    public void deletePastPosition(PastPosition pastPosition){
-        pastPositions.remove(pastPosition);
+
+    private class PastPosition {
+        private String name;
+        private Department department;
+
+        public PastPosition(String name, Department department) {
+            this.name = name;
+            this.department = department;
+        }
+
+        public String getName() {
+            return name;
+        }
+        public void setName(String name) {
+            this.name = name;
+        }
+        public Department getDepartment() {
+            return department;
+        }
+        public void setDepartment(Department department) {
+            this.department = department;
+        }
     }
+
 }

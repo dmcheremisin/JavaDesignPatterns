@@ -28,10 +28,8 @@ public class UmlMain {
         System.out.println("Belongs to the department: "+sysEngineer.getDepartment().getName());
 
         Department juniorDevelopers = new Department("Junior developers");
-        PastPosition pastPosition = new PastPosition("Junior Software Developer", juniorDevelopers);
-        sysEngineer.addPastPosition(pastPosition);
-        System.out.println("Previously worked as: ");
-        sysEngineer.getPastPositions().forEach(p -> System.out.println(p.getName()));
+        sysEngineer.addPastPosition("Junior Software Developer", juniorDevelopers);
+        sysEngineer.getPastPositions().forEach(p -> System.out.println("Pastposition: " + p));
 
         Employee dana = new Employee("Dana", "White", "CEO");
         Menu.showEmployees(sysEngineer, dana);
