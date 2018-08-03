@@ -11,7 +11,7 @@ public class OpenClosed {
      * But by implementing Car interface our code is <<open>> for changes
      * Main class knows only about interface
      *
-     * @param car
+     * @param car - Car
      */
     static void workInTaxi(Car car){
         car.workInTaxi();
