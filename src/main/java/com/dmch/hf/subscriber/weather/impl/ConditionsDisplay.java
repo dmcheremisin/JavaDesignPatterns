@@ -1,7 +1,7 @@
-package com.dmch.hf.subscriber.impl;
+package com.dmch.hf.subscriber.weather.impl;
 
-import com.dmch.hf.subscriber.DisplayElement;
-import com.dmch.hf.subscriber.Observer;
+import com.dmch.hf.subscriber.weather.DisplayElement;
+import com.dmch.hf.subscriber.weather.Observer;
 
 public class ConditionsDisplay implements Observer, DisplayElement {
     private WeatherApp app;

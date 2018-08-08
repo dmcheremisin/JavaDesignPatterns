@@ -1,7 +1,7 @@
-package com.dmch.hf.subscriber.impl;
+package com.dmch.hf.subscriber.weather.impl;
 
-import com.dmch.hf.subscriber.Observer;
-import com.dmch.hf.subscriber.Subscriber;
+import com.dmch.hf.subscriber.weather.Observer;
+import com.dmch.hf.subscriber.weather.Subscriber;
 
 import java.util.ArrayList;
 import java.util.List;

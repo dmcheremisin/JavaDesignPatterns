@@ -1,9 +1,9 @@
-package com.dmch.hf.subscriber;
+package com.dmch.hf.subscriber.weather;
 
-import com.dmch.hf.subscriber.impl.ConditionsDisplay;
-import com.dmch.hf.subscriber.impl.HeatIndexDisplay;
-import com.dmch.hf.subscriber.impl.TempStatisticsDisplay;
-import com.dmch.hf.subscriber.impl.WeatherApp;
+import com.dmch.hf.subscriber.weather.impl.ConditionsDisplay;
+import com.dmch.hf.subscriber.weather.impl.HeatIndexDisplay;
+import com.dmch.hf.subscriber.weather.impl.TempStatisticsDisplay;
+import com.dmch.hf.subscriber.weather.impl.WeatherApp;
 
 public class SubscriberApp {
     public static void main(String[] args) {

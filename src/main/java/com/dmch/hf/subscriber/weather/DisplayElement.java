@@ -1,4 +1,4 @@
-package com.dmch.hf.subscriber;
+package com.dmch.hf.subscriber.weather;
 
 public interface DisplayElement {
     void display();
