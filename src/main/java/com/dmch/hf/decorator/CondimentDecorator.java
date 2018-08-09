@@ -8,27 +8,19 @@ import java.math.BigDecimal;
 public abstract class CondimentDecorator extends Beverage {
     protected BigDecimal cost;
     protected Beverage beverage;
-    protected SIZE size;
-
-    public CondimentDecorator(Beverage beverage) {
-        this.beverage = beverage;
-        this.size = beverage.getSize();
-    }
 
     public abstract String getDescription();
 
     @Override
     public void setSize(SIZE size) {
-        beverage.setSize(size);
+        this.size = size;
+        this.beverage.setSize(size);
     }
 
     @Override
     public BigDecimal cost() {
-        BigDecimal costWithSize = BigDecimal.ZERO;
+        BigDecimal costWithSize = cost;
         switch(size){
-            case SMALL:
-                costWithSize = cost;
-                break;
             case MEDIUM:
                 costWithSize = cost.add(new BigDecimal("0.10"));
                 break;

@@ -9,11 +9,8 @@ import java.math.BigDecimal;
  */
 public class DarkRoast extends Beverage {
     public DarkRoast() {
-        description = "Black Roast";
+        description = "Dark Roast";
+        cost = new BigDecimal("0.99");
     }
 
-    @Override
-    public BigDecimal cost() {
-        return new BigDecimal("0.99");
-    }
 }

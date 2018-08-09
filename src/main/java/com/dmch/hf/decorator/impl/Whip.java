@@ -11,7 +11,9 @@ import java.math.BigDecimal;
 public class Whip extends CondimentDecorator {
 
     public Whip(Beverage beverage) {
-        super(beverage);
+        description = "Whip";
+        this.beverage = beverage;
+        this.size = beverage.getSize();
         cost = new BigDecimal("0.10");
     }
 

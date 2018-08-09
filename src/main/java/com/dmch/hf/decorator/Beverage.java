@@ -8,16 +8,34 @@ import java.math.BigDecimal;
 public abstract class Beverage {
     protected String description = "Unknown beverage";
     protected SIZE size = SIZE.SMALL;
+    protected BigDecimal cost;
 
     public SIZE getSize() {
         return size;
     }
+
     public void setSize(SIZE size) {
         this.size = size;
     }
+
     public String getDescription() {
         return description;
     }
 
-    public abstract BigDecimal cost();
+    public BigDecimal cost() {
+        BigDecimal costWithSize = cost;
+        switch(size){
+            case MEDIUM:
+                costWithSize = cost.add(new BigDecimal("0.10"));
+                break;
+            case LARGE:
+                costWithSize = cost.add(new BigDecimal("0.20"));
+                break;
+        }
+        return costWithSize;
+    }
+
+    public void setCost(BigDecimal cost) {
+        this.cost = cost;
+    }
 }

@@ -10,10 +10,6 @@ import java.math.BigDecimal;
 public class HouseBlend extends Beverage {
     public HouseBlend() {
         description = "House Blend";
-    }
-
-    @Override
-    public BigDecimal cost() {
-        return new BigDecimal("0.89");
+        cost = new BigDecimal("0.89");
     }
 }
