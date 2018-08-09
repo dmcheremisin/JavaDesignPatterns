@@ -7,7 +7,14 @@ import java.math.BigDecimal;
  */
 public abstract class Beverage {
     protected String description = "Unknown beverage";
+    protected SIZE size = SIZE.SMALL;
 
+    public SIZE getSize() {
+        return size;
+    }
+    public void setSize(SIZE size) {
+        this.size = size;
+    }
     public String getDescription() {
         return description;
     }
