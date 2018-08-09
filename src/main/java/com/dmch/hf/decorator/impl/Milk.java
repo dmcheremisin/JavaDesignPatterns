@@ -10,7 +10,7 @@ import java.math.BigDecimal;
  */
 public class Milk extends CondimentDecorator {
     public Milk(Beverage beverage) {
-        this.beverage = beverage;
+        super(beverage);
         cost = new BigDecimal("0.10");
     }
 

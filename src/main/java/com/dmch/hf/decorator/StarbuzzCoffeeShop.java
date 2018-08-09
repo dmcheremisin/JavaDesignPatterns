@@ -18,6 +18,9 @@ public class StarbuzzCoffeeShop {
         beverage1 = new Mocha(beverage1);
         beverage1 = new Mocha(beverage1);
         System.out.println(beverage1.getDescription() + ": cost $" + beverage1.cost());
+
+        beverage1.setSize(SIZE.MEDIUM);
+        System.out.println(beverage1.getDescription() + ": cost $" + beverage1.cost());
         
         Beverage beverage2 = new HouseBlend();
         beverage2 = new Soy(beverage2);
