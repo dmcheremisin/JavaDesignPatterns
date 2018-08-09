@@ -23,6 +23,11 @@ public abstract class Beverage {
     }
 
     public BigDecimal cost() {
+        BigDecimal costDependingOnSize = getCostDependingOnSize(cost);
+        return costDependingOnSize;
+    }
+
+    public BigDecimal getCostDependingOnSize(BigDecimal cost){
         BigDecimal costWithSize = cost;
         switch(size){
             case MEDIUM:
