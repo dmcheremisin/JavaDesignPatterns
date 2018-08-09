@@ -13,7 +13,7 @@ Strategy pattern here is realized in following:
 3. in runtime we can set these fields to any realization of QuackBehavior or FlyBehavior
 4. by default these fields are set to NoFly and Mute
  */
-public class StrategyMain {
+public class DucksApp {
     public static void main(String[] args) {
         Duck mallardDuck = new MallardDuck();
         mallardDuck.performFly();

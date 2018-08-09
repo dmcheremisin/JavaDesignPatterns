@@ -5,7 +5,7 @@ import com.dmch.hf.subscriber.weather.impl.HeatIndexDisplay;
 import com.dmch.hf.subscriber.weather.impl.TempStatisticsDisplay;
 import com.dmch.hf.subscriber.weather.impl.WeatherApp;
 
-public class SubscriberApp {
+public class WeatherStation {
     public static void main(String[] args) {
         WeatherApp weatherApp = new WeatherApp();
         ConditionsDisplay conditionsDisplay = new ConditionsDisplay(weatherApp);
