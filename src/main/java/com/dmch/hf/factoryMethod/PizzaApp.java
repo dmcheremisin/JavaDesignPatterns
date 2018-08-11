@@ -1,7 +1,9 @@
 package com.dmch.hf.factoryMethod;
 
-import com.dmch.hf.factoryMethod.impl.ChicagoPizzaStore;
-import com.dmch.hf.factoryMethod.impl.NyPizzaStore;
+import com.dmch.hf.factoryMethod.store.impl.ChicagoPizzaStore;
+import com.dmch.hf.factoryMethod.store.impl.NyPizzaStore;
+import com.dmch.hf.factoryMethod.pizza.Pizza;
+import com.dmch.hf.factoryMethod.store.PizzaStore;
 
 public class PizzaApp {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.dmch.hf.factoryMethod;
+package com.dmch.hf.factoryMethod.pizza;
 
 public class Pizza {
     protected String name;
@@ -9,19 +9,19 @@ public class Pizza {
         return name;
     }
 
-    void prepare() {
+    public void prepare() {
         System.out.println("Preparing " + name);
         System.out.println("Tossing dough..." + name);
         System.out.println("Adding sauce..." + name);
     }
 
-    protected void bake() {
+    public void bake() {
         System.out.println("Baking for 25 min at 350 degrees");
     }
-    protected void cut() {
+    public void cut() {
         System.out.println("Cutting the pizza into diagonal slices");
     }
-    protected void box() {
+    public void box() {
         System.out.println("Putting pizza into original PizzaStore box");
     }
 }

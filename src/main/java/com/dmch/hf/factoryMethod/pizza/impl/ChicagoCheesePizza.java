@@ -1,6 +1,6 @@
-package com.dmch.hf.factoryMethod.impl;
+package com.dmch.hf.factoryMethod.pizza.impl;
 
-import com.dmch.hf.factoryMethod.Pizza;
+import com.dmch.hf.factoryMethod.pizza.Pizza;
 
 public class ChicagoCheesePizza extends Pizza {
     public ChicagoCheesePizza() {
@@ -10,7 +10,7 @@ public class ChicagoCheesePizza extends Pizza {
     }
 
     @Override
-    protected void cut() {
+    public   void cut() {
         System.out.println("Cutting the pizza into square pieces");
     }
 }

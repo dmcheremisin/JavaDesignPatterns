@@ -1,4 +1,6 @@
-package com.dmch.hf.factoryMethod;
+package com.dmch.hf.factoryMethod.store;
+
+import com.dmch.hf.factoryMethod.pizza.Pizza;
 
 public abstract class PizzaStore {
 

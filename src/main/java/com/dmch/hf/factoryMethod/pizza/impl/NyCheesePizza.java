@@ -1,6 +1,6 @@
-package com.dmch.hf.factoryMethod.impl;
+package com.dmch.hf.factoryMethod.pizza.impl;
 
-import com.dmch.hf.factoryMethod.Pizza;
+import com.dmch.hf.factoryMethod.pizza.Pizza;
 
 public class NyCheesePizza extends Pizza {
     public NyCheesePizza() {

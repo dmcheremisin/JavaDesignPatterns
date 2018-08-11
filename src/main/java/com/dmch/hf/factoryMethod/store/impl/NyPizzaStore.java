@@ -1,7 +1,9 @@
-package com.dmch.hf.factoryMethod.impl;
+package com.dmch.hf.factoryMethod.store.impl;
 
-import com.dmch.hf.factoryMethod.Pizza;
-import com.dmch.hf.factoryMethod.PizzaStore;
+import com.dmch.hf.factoryMethod.pizza.Pizza;
+import com.dmch.hf.factoryMethod.store.PizzaStore;
+import com.dmch.hf.factoryMethod.pizza.impl.NyCheesePizza;
+import com.dmch.hf.factoryMethod.pizza.impl.NyFourSeasonsPizza;
 
 public class NyPizzaStore extends PizzaStore {
     @Override
