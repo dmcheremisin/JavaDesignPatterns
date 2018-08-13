@@ -52,8 +52,9 @@ class SingletonThreadSafe {
         // template double-checked locking
         if(instance == null){
             synchronized (mutex){
-                if(instance == null)
+                if(instance == null) {
                     instance = new SingletonThreadSafe();
+                }
             }
         }
         return instance;
