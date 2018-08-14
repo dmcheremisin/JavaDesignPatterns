@@ -21,7 +21,7 @@ public class HomeTheaterFacade {
         this.screen = screen;
     }
 
-    public void watchMovie() {
+    public void watchMovie(String movie) {
         amplifier.on();
         amplifier.setSurroundSound();
         amplifier.setVolume(10);
@@ -29,6 +29,7 @@ public class HomeTheaterFacade {
         projector.on();
         projector.wideScreenModeOn();
         screen.down();
+        dvd.play(movie);
     }
 
     public void endMovie() {

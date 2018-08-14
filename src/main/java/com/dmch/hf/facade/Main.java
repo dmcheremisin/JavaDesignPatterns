@@ -11,7 +11,7 @@ import com.dmch.hf.facade.environment.Screen;
 public class Main {
     public static void main(String[] args) {
         HomeTheaterFacade facade = new HomeTheaterFacade(new Amplifier(), new DVD(), new Projector(), new Screen());
-        facade.watchMovie();
+        facade.watchMovie("Top Gun");
         System.out.println();
         facade.endMovie();
 
@@ -22,6 +22,7 @@ public class Main {
 //        Projector is on
 //        Wide screen mode is on
 //        Screen is down
+//        DVD is playing movie: Top Gun
 //
 //        Amplifier is off
 //        DVD is off

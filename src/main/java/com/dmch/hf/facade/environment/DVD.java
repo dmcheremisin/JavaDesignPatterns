@@ -10,4 +10,8 @@ public class DVD {
     public void off() {
         System.out.println("DVD is off");
     }
+
+    public void play(String movie) {
+        System.out.println("DVD is playing movie: " + movie);
+    }
 }
