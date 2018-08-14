@@ -50,10 +50,12 @@ public class CommandApp {
 //        Stereo is on
 //        Stereo type is: cd , volume is: 11
 //        Fan speed is: 10
+//        Fan is off
 //        Light is off
 //        Door is down
 //        Door is up
 //        Stereo is off
+//        Fan is off
         
         
     }

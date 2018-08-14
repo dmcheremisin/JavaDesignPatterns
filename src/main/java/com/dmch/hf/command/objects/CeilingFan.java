@@ -23,6 +23,7 @@ public class CeilingFan {
 
     public void off() {
         speed = 0;
+        printSpeed();
     }
 
     public int getSpeed() {
@@ -30,6 +31,10 @@ public class CeilingFan {
     }
 
     public void printSpeed() {
-        System.out.println("Fan speed is: " + speed);
+        if (speed > 0) {
+            System.out.println("Fan speed is: " + speed);
+        } else {
+            System.out.println("Fan is off");
+        }
     }
 }
