@@ -1,11 +1,14 @@
 package com.dmch.hf.iterator.menu;
 
+import com.dmch.hf.iterator.Iterable;
+import com.dmch.hf.iterator.Iterator;
+import com.dmch.hf.iterator.menuIterators.PancakeHouseMenuIterator;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Iterable<MenuItem> {
     List<MenuItem> menuItems = new ArrayList<>();
 
     public PancakeHouseMenu() {
@@ -21,5 +24,10 @@ public class PancakeHouseMenu {
 
     public List<MenuItem> getMenuItems() {
         return menuItems;
+    }
+
+    @Override
+    public Iterator<MenuItem> createIterator() {
+        return new PancakeHouseMenuIterator(menuItems);
     }
 }

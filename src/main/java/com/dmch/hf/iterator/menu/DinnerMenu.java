@@ -1,8 +1,12 @@
 package com.dmch.hf.iterator.menu;
 
+import com.dmch.hf.iterator.Iterable;
+import com.dmch.hf.iterator.Iterator;
+import com.dmch.hf.iterator.menuIterators.DinnerMenuIterator;
+
 import java.math.BigDecimal;
 
-public class DinnerMenu {
+public class DinnerMenu implements Iterable<MenuItem> {
     static final int MAX_ITEMS = 4;
     int numberOfItems = 0;
     MenuItem[] menuItems = new MenuItem[MAX_ITEMS];
@@ -24,5 +28,10 @@ public class DinnerMenu {
 
     public MenuItem[] getMenuItems() {
         return menuItems;
+    }
+
+    @Override
+    public Iterator<MenuItem> createIterator() {
+        return new DinnerMenuIterator(menuItems);
     }
 }

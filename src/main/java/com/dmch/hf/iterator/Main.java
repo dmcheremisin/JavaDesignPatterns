@@ -2,19 +2,15 @@ package com.dmch.hf.iterator;
 
 import com.dmch.hf.iterator.menu.DinnerMenu;
 import com.dmch.hf.iterator.menu.PancakeHouseMenu;
-import com.dmch.hf.iterator.menuIterators.DinnerMenuIterator;
-import com.dmch.hf.iterator.menuIterators.PancakeHouseMenuIterator;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        DinnerMenu dinnerMenu = new DinnerMenu();
-        PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
 
-        Iterator dinnerMenuIterator = new DinnerMenuIterator(dinnerMenu.getMenuItems());
-        Iterator pancakeHouseMenuIterator = new PancakeHouseMenuIterator(pancakeHouseMenu.getMenuItems());
+        Iterator dinnerMenuIterator = new DinnerMenu().createIterator();
+        Iterator pancakeHouseMenuIterator = new PancakeHouseMenu().createIterator();
 
         printMenu(Arrays.asList(dinnerMenuIterator, pancakeHouseMenuIterator));
     }
