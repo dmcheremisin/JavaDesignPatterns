@@ -1,6 +1,8 @@
 package com.dmch.hf.combinedPatterns.decorator;
 
 import com.dmch.hf.combinedPatterns.Quackable;
+import com.dmch.hf.combinedPatterns.observable.Observable;
+import com.dmch.hf.combinedPatterns.observable.Observer;
 
 /**
  * Created by Dmitrii on 18.08.2018.
@@ -21,5 +23,15 @@ public class QuackCounter implements Quackable {
 
     public static int getQuacks() {
         return counter;
+    }
+
+    @Override
+    public void registerObserver(Observer observer) {
+        quackable.registerObserver(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        quackable.notifyObservers();
     }
 }

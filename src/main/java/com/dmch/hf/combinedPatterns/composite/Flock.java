@@ -1,6 +1,8 @@
 package com.dmch.hf.combinedPatterns.composite;
 
 import com.dmch.hf.combinedPatterns.Quackable;
+import com.dmch.hf.combinedPatterns.observable.Observable;
+import com.dmch.hf.combinedPatterns.observable.Observer;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -20,8 +22,21 @@ public class Flock implements Quackable {
     public void quack() {
         Iterator<Quackable> iterator = quackables.iterator();
         while(iterator.hasNext()){
-            Quackable next = iterator.next();
-            next.quack();
+            Quackable quackable = iterator.next();
+            quackable.quack();
         }
+    }
+
+    @Override
+    public void registerObserver(Observer observer) {
+        Iterator<Quackable> iterator = quackables.iterator();
+        while(iterator.hasNext()){
+            Quackable quackable = iterator.next();
+            quackable.registerObserver(observer);
+        }
+    }
+
+    @Override
+    public void notifyObservers() {
     }
 }

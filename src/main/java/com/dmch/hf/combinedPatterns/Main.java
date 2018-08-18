@@ -6,11 +6,17 @@ import com.dmch.hf.combinedPatterns.composite.Flock;
 import com.dmch.hf.combinedPatterns.decorator.QuackCounter;
 import com.dmch.hf.combinedPatterns.duckFactory.AbstractDuckFactory;
 import com.dmch.hf.combinedPatterns.duckFactory.CountingDuckFactory;
+import com.dmch.hf.combinedPatterns.observable.Quackologist;
 
 /**
  * Created by Dmitrii on 18.08.2018.
  */
 public class Main {
+
+    public static void simulate(Quackable quackable){
+        quackable.quack();
+    }
+
     public static void main(String[] args) {
         AbstractDuckFactory factory = new CountingDuckFactory();
 
@@ -29,12 +35,29 @@ public class Main {
 
         flockOfDucks.addQuackable(flockOfMallardDucks);
 
+        Quackologist quackologist = new Quackologist();
+        flockOfDucks.registerObserver(quackologist);
+
         simulate(flockOfDucks);
 
-        System.out.println("Total quacks: " + QuackCounter.getQuacks());
+        System.out.println("Total quacks(without goose quack): " + QuackCounter.getQuacks());
     }
 
-    public static void simulate(Quackable quackable){
-        quackable.quack();
-    }
+    //Quack
+    //Duck: RedheadDuck just quacked
+    //Kwak
+    //Duck: DuckCall just quacked
+    //Squeak
+    //Duck: RubberDuck just quacked
+    //Honk
+    //Duck: GooseAdapter just quacked
+    //Quack
+    //Duck: MallardDuck just quacked
+    //Quack
+    //Duck: MallardDuck just quacked
+    //Quack
+    //Duck: MallardDuck just quacked
+    //Quack
+    //Duck: MallardDuck just quacked
+    //Total quacks(without goose quack): 7
 }

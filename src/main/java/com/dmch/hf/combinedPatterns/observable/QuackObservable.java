@@ -6,6 +6,6 @@ import com.dmch.hf.combinedPatterns.Quackable;
  * Created by Dmitrii on 18.08.2018.
  */
 public interface QuackObservable {
-    void registerDuck(Observer observer);
+    void registerObserver(Observer observer);
     void notifyObservers();
 }
