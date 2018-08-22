@@ -30,15 +30,18 @@ enum Money{
         return nominal;
     }
 }
-
-class Machine {
+interface Handler {
+    void setNext(Handler next);
+    void giveMoney(int amount);
+}
+class Machine implements Handler{
     private int nominal;
-    private Machine next;
+    private Handler next;
 
     public Machine(Money money) {
         this.nominal = money.getNominal();
     }
-    public void setNext(Machine next) {
+    public void setNext(Handler next) {
         this.next = next;
     }
     public void giveMoney(int amount){
