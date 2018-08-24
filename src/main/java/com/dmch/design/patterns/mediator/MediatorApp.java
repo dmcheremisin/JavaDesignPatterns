@@ -5,10 +5,10 @@ import java.util.List;
 
 public class MediatorApp {
     public static void main(String[] args) {
-        TextChat chat = new TextChat();
-        User dima = new SimpleUser("Dima", chat);
+        Chat chat = new TextChat();
+        User dima = new AdminUser("Dima", chat);
         User anya = new SimpleUser("Anya", chat);
-        User mark = new AdminUser("Mark", chat);
+        User mark = new SimpleUser("Mark", chat);
 
         dima.sendMessage("Hello, everybody!");
         anya.sendMessage("Hi!");
