@@ -5,11 +5,11 @@ package com.dmch.design.patterns.visitor;
  */
 public class VisitorApp {
     public static void main(String[] args) {
-        Hermitage hermitage = new Hermitage();
-        RussianMuseum russianMuseum = new RussianMuseum();
+        Museum hermitage = new Hermitage();
+        Museum russianMuseum = new RussianMuseum();
 
-        Student student = new Student();
-        Lector lector = new Lector();
+        Visitor student = new Student();
+        Visitor lector = new Lector();
 
         hermitage.accept(student); // WOW, Hermitage is amazing!
         hermitage.accept(lector); // Hermitage has one of the largest expositions in the world. It was built....
