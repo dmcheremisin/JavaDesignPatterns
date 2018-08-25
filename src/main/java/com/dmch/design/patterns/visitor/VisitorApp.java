@@ -50,6 +50,6 @@ class Lector implements Visitor{
         System.out.println("Hermitage has one of the largest expositions in the world. It was built....");
     }
     public void visit(RussianMuseum russianMuseum) {
-        System.out.println("Russian is the largest depository of Russian fine art in Saint Petersburg. It is also.... ");
+        System.out.println("Russian Museum is the largest depository of Russian fine art in Saint Petersburg. It is also.... ");
     }
 }
