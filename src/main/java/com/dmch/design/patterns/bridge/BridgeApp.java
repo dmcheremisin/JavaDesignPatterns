@@ -29,11 +29,6 @@ class Kia implements Make{
         System.out.println("Kia");
     }
 }
-class Skoda implements Make{
-    public void getMake() {
-        System.out.println("Skoda");
-    }
-}
 
 abstract class Car{
     Make make;
