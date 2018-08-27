@@ -4,16 +4,20 @@ public class HumanApp {
     public static void main(String[] args) {
         Human human = new Human();
         human.setState(new Work());
-        for(int i=0; i< 15; i++){
+        for(int i=0; i < 15; i++){
             human.changeState();
         }
-//        Weekend (Zzz)
-//        Weekend (Zzz)
-//        Weekend (Zzz)
+//        Working
+//        Working
+//        Working
+//        Working
 //        Working
 //        Weekend (Zzz)
 //        Weekend (Zzz)
-//        Weekend (Zzz)
+//        Working
+//        Working
+//        Working
+//        Working
 //        Working
     }
 }
