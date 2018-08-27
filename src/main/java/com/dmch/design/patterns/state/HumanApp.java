@@ -3,8 +3,8 @@ package com.dmch.design.patterns.state;
 public class HumanApp {
     public static void main(String[] args) {
         Human human = new Human();
-        human.setState(new Weekend());
-        for(int i=0; i< 10; i++){
+        human.setState(new Work());
+        for(int i=0; i< 15; i++){
             human.changeState();
         }
 //        Weekend (Zzz)
@@ -22,15 +22,19 @@ interface Activity{
     void doSomething(Human human);
 }
 class Work implements Activity {
+    private int count = 0;
     public void doSomething(Human human) {
-        System.out.println("Working");
-        human.setState(new Weekend());
+        if (count++ < 5){
+            System.out.println("Working");
+        } else {
+            human.setState(new Weekend());
+        }
     }
 }
 class Weekend implements Activity {
     private int count = 0;
     public void doSomething(Human human) {
-        if (count++ < 3){
+        if (count++ < 2){
             System.out.println("Weekend (Zzz)");
         } else {
             human.setState(new Work());
